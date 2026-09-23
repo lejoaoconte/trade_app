@@ -9,3 +9,10 @@ test("Should validate name correctly", () => {
   expect(validateName("John_Doe")).toBe(false);
   expect(validateName("John-Doe")).toBe(false);
 });
+
+test.each(["João Conte", "Antônio Araújo", "Cecília Gonçalves", "Luís Ândrade"])(
+  "Should validate Portuguese accented name: %s",
+  (name: string) => {
+    expect(validateName(name)).toBe(true);
+  },
+);
