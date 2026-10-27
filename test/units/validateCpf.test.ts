@@ -1,7 +1,7 @@
 import { test, expect } from "vitest";
 import { validateCpf } from "../../src/validateCpf";
 
-test.each(["97456321558", "71428793860", "87748248800"])(
+test.each(["974.563.215-58", "71428793860", "87748248800"])(
   "Should verify if is a valid CPF for value: %s",
   (cpf: string) => {
     const isValid = validateCpf(cpf);
@@ -18,7 +18,7 @@ test.each([
 ])(
   "Should verify if is an invalid CPF for value: %s",
   (cpf: string | null | undefined) => {
-    const isValid = validateCpf(cpf);
+    const isValid = validateCpf(cpf as string);
     expect(isValid).toBe(false);
   },
 );
