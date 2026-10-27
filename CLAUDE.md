@@ -104,3 +104,11 @@ npx playwright install
 # Rodar os testes end-to-end
 npx playwright test
 ```
+
+## Padrões de código
+
+As regras de estilo e qualidade de código estão na skill
+[code-standards](.claude/skills/code-standards/SKILL.md). **Essa skill é a
+referência oficial para escrever e revisar código** e deve ser carregada
+sempre que qualquer código (backend ou frontend) for criado, modificado ou
+revisado.
